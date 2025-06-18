@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juegos Gratis - Online</title>
+  <link rel="icon" href="logo/Logo.webp">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Archivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="PaginaGeneral.html">Juegos Gratis</a>
+        <form class="d-flex ms-auto" id="globalSearchForm">
+          <input class="form-control me-2" type="search" id="globalSearch" placeholder="Buscar juego..." aria-label="Buscar" list="gameSuggestions">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+          <datalist id="gameSuggestions"></datalist>
+        </form>
+      </div>
+    </nav>
+    <div class="categories text-center py-3">
+      <a href="Online.html" class="btn category-btn mx-1" data-category="online">Juegos Online</a>
+      <a href="Offline.html" class="btn category-btn mx-1" data-category="offline">Juegos Offline</a>
+      <a href="PaginaGeneral.html" class="btn category-btn mx-1" data-category="all">Todos los Juegos</a>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container py-5">
+    <div class="row g-4" id="gameContainer">
+      <!-- Inserta las mismas tarjetas que en index.html -->
+      <!-- Ejemplo: Solo se mostrarán los que tengan data-category="online" -->
+      <div class="col-md-4 game-card" data-category="online" data-title="R.E.P.O Online Fix">
+        <div class="card shadow-sm">
+          <img src="imagenes_juegos/repo.jpg" class="card-img-top" alt="R.E.P.O Online Fix" height="415">
+          <div class="card-body text-center">
+            <h5 class="card-title">R.E.P.O Online Fix</h5>
+            <a href="Juegos/repo.html" class="btn btn-primary">No Tengo Plata Pa Comprarlo</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 game-card" data-category="online" data-title="Granny Escape Together Online Fix">
+        <div class="card shadow-sm">
+          <img src="Juegos/GrannyTogether.jpg" class="card-img-top" alt="Granny Escape Together Online Fix"height="415">
+          <div class="card-body text-center">
+            <h5 class="card-title">Granny Escape Together Online Fix</h5>
+            <a href="juegos_2/Granny_Escape_Together.html" class="btn btn-primary">No Tengo Plata Pa Comprarlo</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 game-card" data-category="online" data-title="Zort Online Fix">
+        <div class="card shadow-sm">
+          <img src="Juegos/zort.avif" class="card-img-top" alt="Zort Online Fix"height="415">
+          <div class="card-body text-center">
+            <h5 class="card-title">Zort Online Fix</h5>
+            <a href="juegos_3/zort.html" class="btn btn-primary">No Tengo Plata Pa Comprarlo</a>
+          </div>
+        </div>
+      </div>
+      <!-- Agrega más tarjetas de juegos online (hasta 30 por página) -->
+    </div>
+    <!-- Paginación -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center" id="pagination"></ul>
+    </nav>
+  </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Nuestro archivo JavaScript -->
+  <script src="main2.js"></script>
+  <script>
+    // Al cargar esta página se filtra automáticamente por "online"
+    applyFilters('online', '');
+  </script>
+</body>
+</html>

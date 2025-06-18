@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <link rel="stylesheet" href="pichi.css">
+  <link rel="icon"  href="Logo.webp">
+  
+</head>
+<body>
+  <!-- Video de fondo -->
+  <video class="video-fondo" autoplay muted loop>
+    <source src="hippo.mp4" type="video/mp4">
+    
+  </video>
+
+  <!-- Contenedor de Particles.js -->
+  <div id="particles-js"></div>
+
+  <!-- Login box -->
+  <div class="login-box">
+    <h2>Ingresa tu nombre, </h2>
+    <form id="registroForm">
+      <div class="user-box">
+        <input type="text" id="nombre" name="nombre" required />
+        <label>Escribe tu Nombre</label>
+      </div>
+      <button type="submit" class="boton-animado">
+        <span></span><span></span><span></span><span></span>
+        Iniciar
+      </button>
+    </form>
+  </div>
+
+  <!-- Cargar particles.js desde CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <!-- Nuestro archivo JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
